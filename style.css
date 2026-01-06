@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #f1c40f; /* Growtopia kollane */
+    --secondary-color: #34495e; /* Tumedam sinakas-hall */
+    --bg-color: #2c3e50; /* Baas taustavärv */
+    --card-bg: #3b5066; /* Kaardi taust */
+    --btn-primary: #2ecc71; /* Roheline nupp */
+    --btn-secondary: #9b59b6; /* Lilla nupp */
+    --text-color: #ecf0f1;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.logo {
+    font-size: 3.5rem;
+    margin: 0;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+    line-height: 1;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.section-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.section-card h2, .section-card h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.section-card p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.ip-display-box {
+    background-color: #202b37;
+    border: 2px dashed var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 30px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ip-display-box:hover {
+    background-color: #2a3a4b;
+}
+
+.copy-text {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #bbb;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ip-display-box:hover .copy-text {
+    opacity: 1;
+}
+
+
+.btn {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #8e44ad;
+    transform: translateY(-3px);
+}
+
+.how-to-join h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.instructions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.instruction-item {
+    background-color: var(--bg-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    border-left: 5px solid var(--primary-color);
+}
+
+.instruction-item h4 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.instruction-item ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.instruction-item ol li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+code {
+    background-color: rgba(0,0,0,0.4);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Consolas', monospace;
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--primary-color);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .logo { font-size: 2.5rem; }
+    .tagline { font-size: 1rem; }
+    .section-card h2, .section-card h3 { font-size: 1.7rem; }
+    .ip-display-box { font-size: 1.6rem; padding: 15px; }
+    .btn { font-size: 1rem; padding: 12px 20px; }
+}
