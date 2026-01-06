@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minu GTPS - Mängi Nüüd!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">MINU GTPS</h1>
+            <p class="tagline">Uus ajastu algab siin!</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section-card">
+            <div class="container">
+                <h2>Liitu meiega juba täna!</h2>
+                <p>Kogemuse saamiseks laadi alla meie Hosts fail ja alusta mängimist.</p>
+                
+                <div class="ip-display-box" onclick="copyIP()">
+                    <span id="serverIP">123.45.67.89</span>
+                    <span class="copy-text">(Kliki kopeerimiseks!)</span>
+                </div>
+
+                <a href="downloads/gtps_hosts.txt" download="hosts" class="btn btn-primary">LAADI ALLA HOSTS FAIL</a>
+                <a href="Sinu_Discordi_link" target="_blank" class="btn btn-secondary">LIITU DISCORDIGA</a>
+            </div>
+        </section>
+
+        <section class="section-card how-to-join">
+            <div class="container">
+                <h3>Kuidas ühendada?</h3>
+                <div class="instructions-grid">
+                    <div class="instruction-item">
+                        <h4>💻 Windows & Mac</h4>
+                        <ol>
+                            <li>Kopeeri serveri IP (ülalt).</li>
+                            <li>Ava Hosts fail: <code>C:\Windows\System32\drivers\etc\hosts</code></li>
+                            <li>Lisa sinna read: <br><code>IP_SIIN www.growtopia1.com</code><br><code>IP_SIIN www.growtopia2.com</code></li>
+                            <li>Salvesta fail ja ava Growtopia.</li>
+                        </ol>
+                    </div>
+                    <div class="instruction-item">
+                        <h4>📱 iOS & Android</h4>
+                        <ol>
+                            <li>Kopeeri serveri IP (ülalt).</li>
+                            <li>Laadi alla <strong>Hosts Go</strong> äpp (või sarnane VPN-i rakendus).</li>
+                            <li>Lisa äppi uus reegel: <code>www.growtopia1.com</code> suunata <code>IP_SIIN</code>.</li>
+                            <li>Tee sama ka <code>www.growtopia2.com</code> jaoks.</li>
+                            <li>Aktiveeri äpp ja ava Growtopia.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Minu GTPS. Kõik õigused reserveeritud.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
